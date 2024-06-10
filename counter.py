@@ -1,6 +1,9 @@
 import requests
 import json
 
+count = 100
+token = "{{token}}"
+
 
 def getHamsterCards(authorizationToken):
     try:
@@ -94,9 +97,6 @@ def upgradeCard(cardName, authorizationToken):
 
     response = requests.request("POST", url, headers=headers, data=payload)
 
-
-count = 100
-token = ""
 
 n = 0
 while n < count:
